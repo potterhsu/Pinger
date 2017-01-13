@@ -3,7 +3,6 @@ package com.potterhsu.pinger.demo;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,7 +13,7 @@ public class MainActivity extends Activity implements Pinger.OnPingListener {
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
-    private Button btnCancelPingUntilSucceed;
+    private Button btnCancelPingUntilSucceeded;
     private Button btnCancelPingUntilFailed;
 
     @Override
@@ -22,7 +21,7 @@ public class MainActivity extends Activity implements Pinger.OnPingListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnCancelPingUntilSucceed = (Button) findViewById(R.id.btnCancelPingUntilSucceed);
+        btnCancelPingUntilSucceeded = (Button) findViewById(R.id.btnCancelPingUntilSucceeded);
         btnCancelPingUntilFailed = (Button) findViewById(R.id.btnCancelPingUntilFailed);
     }
 
@@ -49,12 +48,12 @@ public class MainActivity extends Activity implements Pinger.OnPingListener {
         }.execute("8.8.8.8");
     }
 
-    public void onBtnPingUntilSucceedClick(View view) {
+    public void onBtnPingUntilSucceededClick(View view) {
         final Pinger pinger = new Pinger();
         pinger.setOnPingListener(this);
-        pinger.pingUntilSucceed("8.8.8.8", 5000);
+        pinger.pingUntilSucceeded("8.8.8.8", 5000);
 
-        btnCancelPingUntilSucceed.setOnClickListener(new View.OnClickListener() {
+        btnCancelPingUntilSucceeded.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pinger.cancel();

@@ -18,26 +18,26 @@
         android:onClick="onBtnPingClick" />
 
     <Button
-        android:id="@+id/btnPingUntilSucceed"
+        android:id="@+id/btnPingUntilSucceeded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnPing"
-        android:text="Ping Until Succeed"
-        android:onClick="onBtnPingUntilSucceedClick" />
+        android:text="Ping Until Succeeded"
+        android:onClick="onBtnPingUntilSucceededClick" />
 
     <Button
-        android:id="@+id/btnCancelPingUntilSucceed"
+        android:id="@+id/btnCancelPingUntilSucceeded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/btnPingUntilSucceed"
-        android:layout_toEndOf="@id/btnPingUntilSucceed"
+        android:layout_alignBaseline="@id/btnPingUntilSucceeded"
+        android:layout_toEndOf="@id/btnPingUntilSucceeded"
         android:text="Cancel" />
 
     <Button
         android:id="@+id/btnPingUntilFailed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnPingUntilSucceed"
+        android:layout_below="@id/btnPingUntilSucceeded"
         android:text="Ping Until Failed"
         android:onClick="onBtnPingUntilFailedClick" />
 

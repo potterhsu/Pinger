@@ -28,7 +28,7 @@ public class Pinger {
         return false;
     }
 
-    public void pingUntilSucceed(final String destination, final long intervalInMillis) {
+    public void pingUntilSucceeded(final String destination, final long intervalInMillis) {
         pingThread = new Thread() {
             @Override
             public void run() {
