@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.potterhsu.pinger.demo.MainActivity">
+
+    <Button
+        android:id="@+id/btnPing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ping"
+        android:onClick="onBtnPingClick" />
+
+    <Button
+        android:id="@+id/btnPingUntilSucceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPing"
+        android:text="Ping Until Succeed"
+        android:onClick="onBtnPingUntilSucceedClick" />
+
+    <Button
+        android:id="@+id/btnCancelPingUntilSucceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnPingUntilSucceed"
+        android:layout_toEndOf="@id/btnPingUntilSucceed"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/btnPingUntilFailed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPingUntilSucceed"
+        android:text="Ping Until Failed"
+        android:onClick="onBtnPingUntilFailedClick" />
+
+    <Button
+        android:id="@+id/btnCancelPingUntilFailed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnPingUntilFailed"
+        android:layout_toEndOf="@id/btnPingUntilFailed"
+        android:text="Cancel" />
+
+</RelativeLayout>
