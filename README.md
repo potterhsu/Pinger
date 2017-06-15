@@ -12,7 +12,7 @@
 2.  In target module build.gradle
   ```
   dependencies {
-    compile 'com.github.potterhsu:Pinger:v1.0'
+    compile 'com.github.potterhsu:Pinger:v1.1'
   }
   ```
 

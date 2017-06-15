@@ -21,6 +21,7 @@ public class Pinger {
             String command = String.format("/system/bin/ping -c 3 -W %d %s", timeoutInSeconds, destination);
             Process process = runtime.exec(command);
             int ret = process.waitFor();
+            process.destroy();
             return ret == 0;
         } catch (IOException e) {
             e.printStackTrace();
